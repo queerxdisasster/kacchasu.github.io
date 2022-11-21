@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #161623;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(30% at right 70%);
+    background: linear-gradient(#f00, #f0f);
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#2196f3, #e91e63);
+    clip-path: circle(20% at 10% 10%);
+}
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+.container .card {
+    z-index: 2;
+    position: relative;
+    width: 95vw;
+    height: auto;
+    margin: 2.5%;
+    padding: 2%;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.title {
+    grid-area: title;
+    justify-self: center;
+    font-size: 3em;
+}
+@media (max-width: 768px) {
+    .title {
+        font-size: 2.5em;
+    }
+}
+@media (max-width: 450px) {
+    .title {
+        font-size: 2em;
+    }
+}
+.name {
+    grid-area: name;
+}
+
+.submit {
+    grid-area: submit;
+}
+
+.surname {
+    grid-area: surname;
+}
+
+.txtarea {
+    grid-area: txtarea;
+}
+
+.phone {
+    grid-area: phone;
+}
+
+.email {
+    grid-area: email;
+}
+.userdata * {
+    margin: 2%;
+}
+.userdata {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+    "name"
+    "surname"
+      "email"
+    "phone"
+    "txtarea"
+    "submit";
+}
+@media (min-width: 713px){
+    .userdata {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+                "title  title"
+                "name   surname"
+                "email  phone"
+                "txtarea    txtarea"
+                "submit submit";
+    }
+    .txtarea {
+        margin: 1%;
+    }
+}
+input, textarea {
+    outline: none;
+    padding: 1em;
+    margin: 0.5em;
+    border: none;
+    border-radius: 20px;
+    background: none;
+    backdrop-filter: opacity(1);
+    color: white;
+    transition: .4s;
+}
+input:hover, textarea:hover {
+    background: rgba(255, 255, 255, 0.58);
+    color: black;
+}
+
+input:focus, textarea:focus {
+    background-color: white;
+    color: black;
+}
+
+textarea {
+    resize: none;
+}
+
+
+input[type=submit] {
+    color: black;
+    padding: 0.5em 1.7em;
+    font-size: 1.2em;
+    background: rgba(255, 255, 255, 0.58);
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.53);
+    cursor: pointer;
+    width: auto;
+    place-self: center;
+    transition: .4s;
+}
+input[type=submit]:hover {
+    background-color: white;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.68);
+}
+.contact h1 {
+    color: white;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
