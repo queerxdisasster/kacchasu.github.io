@@ -61,6 +61,13 @@ function changeMainContent() {
     let placebo = document.getElementById('placebo');
     let samsmith = document.getElementById('samsmith');
     let mrkitty = document.getElementById('mrkitty');
+    let heather = document.getElementsByClassName("heather");
+    let yb = document.getElementsByClassName("yb");
+    let con = document.getElementsByClassName("conan");
+    let gir = document.getElementsByClassName("gir");
+    let plac = document.getElementsByClassName("bowie");
+    let ss = document.getElementsByClassName("lp");
+    let kit = document.getElementsByClassName("halsey");
     // getting radio buttons
     let radio = document.getElementsByName('gallery');
     for (let i = 0; i < radio.length; i++) {

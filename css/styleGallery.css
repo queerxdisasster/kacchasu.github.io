@@ -62,19 +62,23 @@ body::after {
     border-radius: 10px;
     object-fit: cover;
     z-index: 2;
-    transform: scale(98%);
     transition: .5s;
 }
 
 label > input {
     display: none;
 }
+label > input + .gallery__img {
+    transform: scale(98%);
+    opacity: 0.5;
+}
 label > input:hover + .gallery__img {
-    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 1);
+    transform: scale(100%);
+    opacity: 1;
 }
 label > input:checked + .gallery__img {
     transform: scale(100%);
-    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 1);
+    opacity: 1;
 }
 .bowie {
     grid-column-start: 1;
