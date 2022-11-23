@@ -63,6 +63,7 @@ body::after {
     grid-area: title;
     justify-self: center;
     font-size: 3em;
+    cursor: default;
 }
 @media (max-width: 768px) {
     .title {

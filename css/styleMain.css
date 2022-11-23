@@ -8,12 +8,15 @@
 
 body {
     display: block;
+    color: white;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     background: #161623;
 }
-
+#conan, #yungblud, #girlinred, #mrkitty, #palewaves, #samsmith, #placebo {
+    display: none;
+}
 body::before {
     content: '';
     position: fixed;
@@ -36,228 +39,216 @@ body::after {
     background: linear-gradient(#2196f3, #e91e63);
     clip-path: circle(20% at 10% 10%);
 }
-a {
-    text-decoration: none;
-    color: inherit;
-}
-.container {
+.card {
+    z-index: 2;
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 1200px;
-    flex-wrap: wrap;
-    z-index: 1;
-}
-.main-head {
-    grid-area: header;
-}
-.content {
-    grid-area: content;
-}
-.main-nav {
-    grid-area: nav;
-}
-.side {
-    grid-area: sidebar;
-}
-.ad {
-    grid-area: ad;
-}
-.wrapper {
-    display: grid;
-    place-items: center;
-    gap: 20px;
-    grid-template-areas:
-    "header"
-    "nav"
-    "content"
-    "sidebar"
-    "ad"
-    "footer";
-}
-@media (min-width: 769px) {
-    .wrapper {
-        grid-template-columns: 1fr 3fr;
-        grid-template-areas:
-      "header  header"
-      "nav     nav"
-      "sidebar content"
-      "ad      footer";
-    }
-    nav ul {
-        display: flex;
-        justify-content: space-between;
-    }
-}
-@media (min-width: 1001px) {
-    .wrapper {
-        grid-template-columns: 1fr 4fr 1fr;
-        grid-template-areas:
-      "header header  header"
-      "nav    content sidebar"
-      "nav    content ad"
-      "footer footer  footer";
-    }
-    nav ul {
-        flex-direction: column;
-    }
-}
-
-.btn {
-    border: none;
-    padding: 3px;
-    margin: 0 5px;
-    border-radius: 25%;
-    cursor: pointer;
-    z-index: 1;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-}
-.tg {
-    transition: 1s ease-in;
-}
-.yt {
-    transition: 1s ease-in;
-}
-.twi {
-    transition: 1s ease-in;
-}
-.sp {
-    transition: 1s ease-in;
-}
-.inst {
-    transition: 1s ease-in;
-}
-
-
-button img {
-    position: relative;
-    width: 20px;
-    height: 20px;
-    z-index: 3;
-}
-
-@media (min-width: 769px) {
-    button img {
-        width: 30px;
-        height: 30px;
-    }
-    .btn {
-        padding: 5px;
-    }
-}
-@media (min-width: 1001px) {
-    button img {
-        width: 40px;
-        height: 40px;
-    }
-    .btn {
-        padding: 8px;
-    }
-}
-footer {
-    position: relative;
-    width: 90%;
     height: auto;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    bottom: -20px;
-    margin-bottom: 3%;
+    margin: 20px;
+    padding: 15px;
     box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
-    border-radius: 15px;
+    border-radius: 20px;
     background: rgba(255, 255, 255, 0.1);
-    border-top: 1px solid rgba(255, 255, 255, 0.5);
-    border-left: 1px solid rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(5px);
 }
-button {
-    background: none;
-    overflow: hidden;
+nav > ul > li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px;
+    transition: 0.3s;
+    cursor: default;
+}
+.main-content {
     display: flex;
-}
-.buttons {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-.holder {
-    position: absolute;
-    top: -100px;
-    left: -60px;
-    width:10vw;
-    height: 100vh;
-    transform: translateY(-100vh);
-    transition: 1s linear;
-}
-.tg1 {
-    background: linear-gradient(#0088cc, #e91e63);
-}
-.yt1 {
-    background: linear-gradient(#b9021e, #e91e63);
-}
-.twi1 {
-    background: linear-gradient(#25aff5, #e91e63);
-}
-.sp1 {
-    background: linear-gradient(#007513, #e91e63);
-}
-.inst1 {
-    background: linear-gradient(#f3a71a, #e91e63);
-}
-.btn:hover .holder {
-    transform: translateY(30px);
+    flex-wrap: wrap;
+    align-items: center;
+    place-content: center;
+    margin: 10px;
 }
 
-.main-footer {
-    display: grid;
-    place-items: center;
-    grid-area: footer;
-    gap: 20px;
-    grid-template-areas:
-    "socials"
-    "links"
-    "artists"
-    "contacts";
+.main-content > .content {
+    max-width: 700px;
+    overflow-wrap: break-word;
 }
-h3 {
+h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin: 10px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.68);
+    text-align: center;
+    cursor: default;
+}
+.main-content > .content > p {
+    font-size: 1.2rem;
+    text-transform: lowercase;
+    text-align: justify;
+    margin: 10px;
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.68);
+    cursor: default;
+
+}
+@media (max-width: 768px) {
+    .main-content > .content > p {
+        font-size: 0.9rem;
+    }
+}
+.genres {
+    display: flex;
+    flex-wrap: wrap;
+    place-content: center;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 10px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.68);
+}
+.main-nav > ul{
+    display: flex;
+    flex-wrap: wrap;
+    place-content: center;
+}
+aside {
+    display: flex;
+    flex-wrap: wrap;
+    place-content: center;
+}
+/* Контейнер с ограниченными размерами, он будет выполнять роль "окна" */
+.slider-container {
+    width: 400px;
+    height:calc(400px + 2.5rem + 20px);
+    margin: 30px;
+    border-radius: 20px;
+    position: relative;
+    object-fit: cover;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+}
+.slider-item > img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
     transition: .5s;
 }
-footer h3:hover {
-    transform: scale(110%);
-    color: white;
+/* Лента с фото, имеет неограниченную ширину и тип flex, чтобы картинки не переносились */
+.slider-track {
+    height:400px;
+    display: flex;
+    transition-duration: .5s;
 }
-@media (min-width: 769px) {
-    .main-footer{
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas:
-      "socials  links"
-      "artists  contacts"
-
+/* Стили для оформления кнопок prev/next */
+.arrow {
+    width:7px;
+    height:7px;
+    border-top:#cacaca 3px solid;
+    border-right:#cacaca 3px solid;
+    position: absolute;
+}
+.arrow-bg {
+    width:30px;
+    height:30px;
+    background: #fff;
+    box-shadow: 0 0 4px 2px rgba(0,0,0,.2);
+    border-radius: 50%;
+    position: relative;
+    opacity: .8;
+    cursor: pointer;
+}
+.arrow-left .arrow {
+    transform: rotate(-135deg);
+    top:10px;
+    left:12px;
+}
+.arrow-right .arrow {
+    transform: rotate(45deg);
+    top:10px;
+    left:8px;
+}
+.arrow-left {
+    position: absolute;
+    top:calc(50% + 1.25rem + 10px);
+    left:10px;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+.arrow-right {
+    position: absolute;
+    top:calc(50% + 1.25rem + 10px);
+    right:10px;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+@media (max-width: 768px) {
+    .main-nav > ul{
+        display: flex;
+        flex-wrap: wrap;
+        place-content: center;
     }
-}
-@media (min-width: 1001px) {
-    .main-footer{
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-areas:
-      "socials  links artists contacts";
-    }
-}
-.socials {
-    grid-area: socials;
-}
-.contacts {
-    grid-area: contacts;
-}
-.links {
-    grid-area: links;
-}
-.artists {
-    grid-area: artists;
-}
+    .slider-container {
+        width: 300px;
+        height:calc(300px + 2.5rem + 20px);
+        margin: 30px;
+        border-radius: 20px;
+        position: relative;
+        object-fit: cover;
+        overflow: hidden;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(5px);
 
-a {
-    text-decoration: none;
-    color: inherit;
+        box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    }
+    .slider-item > img {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        transition: .5s;
+    }
+    /* Лента с фото, имеет неограниченную ширину и тип flex, чтобы картинки не переносились */
+    .slider-track {
+        height:300px;
+        display: flex;
+        transition-duration: .5s;
+    }
+    /* Стили для оформления кнопок prev/next */
+    .arrow {
+        width:7px;
+        height:7px;
+        border-top:#cacaca 3px solid;
+        border-right:#cacaca 3px solid;
+        position: absolute;
+    }
+    .arrow-bg {
+        width:30px;
+        height:30px;
+        background: #fff;
+        box-shadow: 0 0 4px 2px rgba(0,0,0,.2);
+        border-radius: 50%;
+        position: relative;
+        opacity: .8;
+        cursor: pointer;
+    }
+    .arrow-left .arrow {
+        transform: rotate(-135deg);
+        top:10px;
+        left:12px;
+    }
+    .arrow-right .arrow {
+        transform: rotate(45deg);
+        top:10px;
+        left:8px;
+    }
+    .arrow-left {
+        position: absolute;
+        top:calc(50% + 1.25rem + 10px);
+        left:10px;
+        transform: translateY(-50%);
+        z-index: 2;
+    }
+    .arrow-right {
+        position: absolute;
+        top:calc(50% + 1.25rem + 10px);
+        right:10px;
+        transform: translateY(-50%);
+        z-index: 2;
+    }
 }

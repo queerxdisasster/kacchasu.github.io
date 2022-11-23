@@ -34,5 +34,4 @@ links.forEach((link) => {
 function closeOnClick() {
     popup.classList.remove("open");
     hamb.classList.remove("active");
-
 }

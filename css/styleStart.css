@@ -81,11 +81,13 @@ body::after {
 
 .container .card .content h3 {
     font-size: 1.8em;
+    cursor: default;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
     color: #fff;
     z-index: 1;
 }
 .container .card .content p {
+    cursor: default;
     font-size: 1em;
     color: #fff;
     font-weight: 300;
@@ -208,9 +210,7 @@ input[type=submit]:hover {
     background-color: white;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.68);
 }
-.contact h1 {
-    color: white;
-}
+
 .login a {
     margin: 5px;
     text-decoration: none;
@@ -222,6 +222,7 @@ input[type=submit]:hover {
 }
 .login h1 {
     color: white;
+    cursor: default;
     font-size: 3.4em;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }

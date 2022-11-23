@@ -3,35 +3,533 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>glassmorphism</title>
+    <title>artists | s4qm</title>
     <link rel="icon" href="../img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="../css/styleGallery.css">
+    <link rel="stylesheet" type="text/css" href="../css/styleMain.css">
+    <link rel="stylesheet" type="text/css" href="../css/headFoot.css">
 </head>
 <body>
-
-    <div class="gallery">
-        <img src="../img/bowie_molko.png" class="gallery__img bowie" alt="Image 1">
-        <div class="gallery__img bowie txt">samdfksmdf</div>
-
-        <img src="../img/conan.png" class="gallery__img conan" alt="Image 2">
-        <div class="gallery__img conan txt">3moemofmoaei</div>
-
-        <img src="../img/girlinred.png" class="gallery__img gir" alt="Image 3">
-        <div class="gallery__img gir txt">3moemofmoaei</div>
-
-        <img src="../img/heather.png" class="gallery__img heather" alt="Image 4">
-        <div class="gallery__img heather txt">3moemofmoaei</div>
-
-        <img src="../img/lp.png" class="gallery__img lp" alt="Image 5">
-        <div class="gallery__img lp txt">3moemofmoaei</div>
-
-        <img src="../img/yungblud.png" class="gallery__img yb" alt="Image 6">
-        <div class="gallery__img yb txt">3moemofmoaei</div>
-
-        <img src="../img/halsey.png" class="gallery__img halsey" alt="Image 7">
-        <div class="gallery__img halsey txt ">3moemofmoaei</div>
-
+<div class="gap"></div>
+<nav class="navbar">
+    <div class="container">
+        <div class="navbar__wrap">
+            <div class="hamb">
+                <div class="hamb__field" id="hamb">
+                    <span class="bar"></span> <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+            <div class="logo">
+                <a href="../index.html"><img src="../img/logo.png" alt="logo"></a>
+                <p><a href="../index.html"><b>simp4<br>queer<br>music</b></a></p>
+            </div>
+            <div class="menu" id="menu">
+                <a href="#">ARTISTS</a>
+                <a href="#">RELEASES</a>
+                <a href="#">TOURS</a>
+            </div>
+        </div>
     </div>
+</nav>
+<div class="popup" id="popup"></div>
+<script src="../scripts/burger.js"></script>
+
+
+<div class="gallery" id="gallery">
+    <label class="gallery__img bowie" onclick="changeMainContent()">
+        <input type="radio" name="gallery" value="placeboRadio">
+        <img src="../img/bowie_molko.png" class="gallery__img bowie" alt="Image 1">
+    </label>
+
+    <label class="gallery__img conan" onclick="changeMainContent()">
+        <input type="radio" name="gallery" value="conanRadio">
+        <img src="../img/conan.png" class="gallery__img conan" alt="Image 2">
+    </label>
+
+    <label class="gallery__img gir" onclick="changeMainContent()">
+        <input type="radio" name="gallery" value="girlinredRadio">
+        <img src="../img/girlinred.png" class="gallery__img gir" alt="Image 3">
+    </label>
+
+    <label class="gallery__img heather" onclick="changeMainContent()">
+        <input type="radio" name="gallery" value="palewavesRadio">
+        <img src="../img/heather.png" class="gallery__img heather" alt="Image 4">
+    </label>
+
+    <label class="gallery__img lp" onclick="changeMainContent()">
+        <input type="radio" name="gallery" value="samsmithRadio">
+        <img src="../img/lp.png" class="gallery__img lp" alt="Image 5">
+    </label>
+
+    <label class="gallery__img yb" onclick="changeMainContent()">
+        <input type="radio" name="gallery" value="yungbludRadio">
+        <img src="../img/yungblud.png" class="gallery__img yb" alt="Image 6">
+    </label>
+
+    <label class="gallery__img halsey" onclick="changeMainContent()">
+        <input type="radio" name="gallery" value="mrkittyRadio">
+        <img src="../img/halsey.png" class="gallery__img halsey" alt="Image 7">
+    </label>
+</div>
+
+<div id="cont"></div>
+
+<div id="conan">
+    <div class="genres">
+        <nav class="card main-nav">
+            <ul>
+                <li>pop</li>
+                <li>indie pop</li>
+                <li>acoustic pop</li>
+                <li>bedroom pop</li>
+            </ul>
+        </nav>
+        <aside class="card side"><a href="https://conangray.com">conangray.com</a></aside>
+    </div>
+    <div class="main-content">
+        <article class="card content">
+            <h1>who is he</h1>
+            <p>
+                Conan Lee Gray (born December 5, 1998) is an American singer and songwriter. Born in Lemon Grove,
+                California and raised in Georgetown, Texas, he began uploading vlogs, covers and original songs to
+                YouTube
+                as a teenager. Gray signed a record deal with Republic Records in 2018, where he released his debut EP
+                Sunset Season (2018). Bolstered by the commercially successful singles "Maniac" and "Heather", his debut
+                studio album Kid Krow (2020) debuted at number five on the US Billboard 200, making it the biggest US
+                new
+                artist debut of the year. His second studio album, Superache (2022), received critical acclaim and
+                debuted
+                within the top 10 in the United States, the United Kingdom, Australia, Ireland and the Netherlands.
+            </p>
+        </article>
+        <div class="slider-container" id="slider-container__conan">
+            <h1>albums</h1>
+            <div class="arrow-left" id="arrow-left__conan">
+                <div class="arrow-bg">
+                    <div class="arrow"></div>
+                </div>
+            </div>
+            <div class="arrow-right" id="arrow-right__conan">
+                <div class="arrow-bg">
+                    <div class="arrow"></div>
+                </div>
+            </div>
+            <!-- .slider-track - лента с фотографиями -->
+            <div class="slider-track" id="slider-track__conan">
+                <div class="slider-item slider-item__conan">
+                    <img src="../img/conan/1.png" alt="">
+                </div>
+                <div class="slider-item slider-item__conan" id="slider-item">
+                    <img src="../img/conan/2.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="girlinred">
+    <div class="genres">
+        <nav class="card main-nav">
+            <ul>
+                <li>indie pop</li>
+                <li>dream pop</li>
+                <li>bedroom pop</li>
+            </ul>
+        </nav>
+        <aside class="card side"><a href="https://worldinred.com">worldinred.com</a></aside>
+    </div>
+    <div class="main-content">
+        <article class="card content">
+            <h1>who is she</h1>
+            <p>
+                Marie Ulven Ringheim (born 16 February 1999) is a Norwegian singer-songwriter and record producer, known
+                for her indie pop project Girl in Red. Her early EPs Chapter 1 (2018) and Chapter 2 (2019) were recorded
+                in her bedroom and feature songs about romance and mental health. Released through AWAL, her debut
+                studio album If I Could Make It Go Quiet (2021), was a critical and commercial success, and won three
+                Norwegian Grammy Awards, including Album of the Year.
+
+                Girl in Red has been cited as a queer icon by Paper, and "one of the most astute and exciting
+                singer-songwriters working in the world of guitar music" by The New York Times. In January 2021, her
+                singles "I Wanna Be Your Girlfriend" (2017) and "We Fell in Love in October" (2018) were certified gold
+                in the US.
+            </p>
+        </article>
+        <div class="slider-container" id="slider-container__girlinred">
+            <h1>albums</h1>
+            <div class="arrow-left" id="arrow-left__girlinred">
+                <div class="arrow-bg">
+                    <div class="arrow"></div>
+                </div>
+            </div>
+            <div class="arrow-right" id="arrow-right__girlinred">
+                <div class="arrow-bg">
+                    <div class="arrow"></div>
+                </div>
+            </div>
+            <!-- .slider-track - лента с фотографиями -->
+            <div class="slider-track" id="slider-track__girlinred">
+                <div class="slider-item slider-item__girlinred">
+                    <img src="../img/girlinred/1.png" alt="">
+                </div>
+                <div class="slider-item slider-item__girlinred">
+                    <img src="../img/girlinred/2.png" alt="">
+                </div>
+                <div class="slider-item slider-item__girlinred">
+                    <img src="../img/girlinred/3.png" alt="">
+                </div>
+                <div class="slider-item slider-item__girlinred">
+                    <img src="../img/girlinred/4.png" alt="">
+                </div>
+                <div class="slider-item slider-item__girlinred">
+                    <img src="../img/girlinred/5.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="placebo">
+    <div class="genres">
+        <nav class="card main-nav">
+            <ul>
+                <li>alternative rock</li>
+                <li>glam rock</li>
+                <li>pop-punk</li>
+            </ul>
+        </nav>
+        <aside class="card side"><a href="https://www.placeboworld.co.uk/">placeboworld.co.uk</a></aside>
+    </div>
+    <div class="main-content">
+        <article class="card content">
+            <h1>who are they</h1>
+            <p>
+                Placebo are a British rock band, formed in London in 1994 by vocalist–guitarist Brian Molko and
+                bassist–guitarist Stefan Olsdal.
+            </p>
+            <p>
+                Following the release of a demo, a split single, and their eponymous debut album, Placebo gained
+                exposure in 1997 after the single "Nancy Boy" became popular in the UK, a song notorious at the time for
+                its gender-bending content. The band stood out amongst the Britpop scene they were associated with at
+                the time for their androgynous appearance and musical content, and lyrics which openly discussed
+                sexuality, mental health, and drug use.
+            </p>
+            <p>
+                Placebo have collaborated with various artists over the years, including David Bowie, Justin Warfield,
+                Michael Stipe and Alison Mosshart. To date, Placebo have released eight studio albums, all of which have
+                reached the Top 20 in the United Kingdom, and have sold around 11 million records worldwide.
+            </p>
+        </article>
+        <div class="slider-container" id="slider-container__placebo">
+            <h1>albums</h1>
+            <div class="arrow-left" id="arrow-left__placebo">
+                <div class="arrow-bg">
+                    <div class="arrow"></div>
+                </div>
+            </div>
+            <div class="arrow-right" id="arrow-right__placebo">
+                <div class="arrow-bg">
+                    <div class="arrow"></div>
+                </div>
+            </div>
+            <!-- .slider-track - лента с фотографиями -->
+            <div class="slider-track" id="slider-track__placebo">
+                <div class="slider-item slider-item__placebo">
+                    <img src="../img/placebo/1.png" alt="">
+                </div>
+                <div class="slider-item slider-item__placebo">
+                    <img src="../img/placebo/2.png" alt="">
+                </div>
+                <div class="slider-item slider-item__placebo">
+                    <img src="../img/placebo/3.png" alt="">
+                </div>
+                <div class="slider-item slider-item__placebo">
+                    <img src="../img/placebo/4.png" alt="">
+                </div>
+                <div class="slider-item slider-item__placebo">
+                    <img src="../img/placebo/5.png" alt="">
+                </div>
+                <div class="slider-item slider-item__placebo">
+                    <img src="../img/placebo/6.png" alt="">
+                </div>
+                <div class="slider-item slider-item__placebo">
+                    <img src="../img/placebo/7.png" alt="">
+                </div>
+                <div class="slider-item slider-item__placebo">
+                    <img src="../img/placebo/8.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="yungblud">
+    <div class="genres">
+        <nav class="card main-nav">
+            <ul>
+                <li>alternative rock</li>
+                <li>hip hop</li>
+                <li>pop-punk</li>
+            </ul>
+        </nav>
+        <aside class="card side"><a href="https://www.yungbludofficial.com/">yungbludofficial.com</a></aside>
+    </div>
+    <div class="main-content">
+        <article class="card content">
+            <h1>who is he</h1>
+            <p>
+                Dominic Richard Harrison (born 5 August 1997), known professionally as Yungblud (pronounced
+                "Youngblood"), is an English singer, musician, songwriter and actor. In 2018, he released his first EP,
+                Yungblud, followed shortly after by the album 21st Century Liability. In 2019, he released another
+                EP, The Underrated Youth. His second album, Weird!, was released in late 2020 and peaked at the top of
+                the UK Albums Chart and reached number 75 on the US Billboard 200.
+            </p>
+        </article>
+        <div class="slider-container" id="slider-container__yungblud">
+            <h1>albums</h1>
+            <div class="arrow-left" id="arrow-left__yungblud">
+                <div class="arrow-bg">
+                    <div class="arrow"></div>
+                </div>
+            </div>
+            <div class="arrow-right" id="arrow-right__yungblud">
+                <div class="arrow-bg">
+                    <div class="arrow"></div>
+                </div>
+            </div>
+            <!-- .slider-track - лента с фотографиями -->
+            <div class="slider-track" id="slider-track__yungblud">
+                <div class="slider-item slider-item__yungblud">
+                    <img src="../img/yungblud/1.png" alt="">
+                </div>
+                <div class="slider-item slider-item__yungblud">
+                    <img src="../img/yungblud/2.png" alt="">
+                </div>
+                <div class="slider-item slider-item__yungblud">
+                    <img src="../img/yungblud/3.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="samsmith">
+    <div class="genres">
+        <nav class="card main-nav">
+            <ul>
+                <li>pop</li>
+                <li>r&b</li>
+                <li>soul</li>
+            </ul>
+        </nav>
+        <aside class="card side"><a href="https://samsmithworld.com/">samsmithworld.com</a></aside>
+    </div>
+    <div class="main-content">
+        <article class="card content">
+            <h1>who are they</h1>
+            <p>
+                Samuel Frederick Smith (born 19 May 1992) is an English singer and songwriter. After rising to
+                prominence in October 2012 by featuring on Disclosure's breakthrough single "Latch", which peaked at
+                number eleven on the UK Singles Chart, they were subsequently featured on Naughty Boy's "La La La",
+                which became a number one single in May 2013. In December 2013, Smith was nominated for the 2014 Brit
+                Critics' Choice Award and the BBC's Sound of 2014 poll, winning both.
+            </p>
+        </article>
+        <div class="slider-container" id="slider-container__samsmith">
+            <h1>albums</h1>
+            <div class="arrow-left" id="arrow-left__samsmith">
+                <div class="arrow-bg">
+                    <div class="arrow"></div>
+                </div>
+            </div>
+            <div class="arrow-right" id="arrow-right__samsmith">
+                <div class="arrow-bg">
+                    <div class="arrow"></div>
+                </div>
+            </div>
+            <!-- .slider-track - лента с фотографиями -->
+            <div class="slider-track" id="slider-track__samsmith">
+                <div class="slider-item slider-item__samsmith">
+                    <img src="../img/samsmith/1.png" alt="">
+                </div>
+                <div class="slider-item slider-item__samsmith">
+                    <img src="../img/samsmith/2.png" alt="">
+                </div>
+                <div class="slider-item slider-item__samsmith">
+                    <img src="../img/samsmith/3.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="mrkitty">
+    <div class="genres">
+        <nav class="card main-nav">
+            <ul>
+                <li>synthwave</li>
+                <li>synth-pop</li>
+                <li>new wave</li>
+                <li>dark wave</li>
+                <li>witch house</li>
+            </ul>
+        </nav>
+        <aside class="card side"><a href="https://www.youtube.com/channel/UC7C0JKhMViaCv7AUubtEMng">mr.kitty official
+            (yt)</a></aside>
+    </div>
+    <div class="main-content">
+        <article class="card content">
+            <h1>who is he</h1>
+            <p>
+                Forrest Avery Carney (born: March 25, 1992 [age 30]), better known online as Mr.Kitty Official
+                (formally Mr.Kitty), is an American synthpop musician and YouTuber based in Austin, Texas. His music
+                covers dark topics, aimed at arousing a feeling of nostalgia within the listener. He is known for his
+                use of autotune and his unique vocal style.
+            </p>
+        </article>
+        <div class="slider-container" id="slider-container__mrkitty">
+            <h1>albums</h1>
+            <div class="arrow-left" id="arrow-left__mrkitty">
+                <div class="arrow-bg">
+                    <div class="arrow"></div>
+                </div>
+            </div>
+            <div class="arrow-right" id="arrow-right__mrkitty">
+                <div class="arrow-bg">
+                    <div class="arrow"></div>
+                </div>
+            </div>
+            <!-- .slider-track - лента с фотографиями -->
+            <div class="slider-track" id="slider-track__mrkitty">
+                <div class="slider-item slider-item__mrkitty">
+                    <img src="../img/mrkitty/1.png" alt="">
+                </div>
+                <div class="slider-item slider-item__mrkitty">
+                    <img src="../img/mrkitty/2.png" alt="">
+                </div>
+                <div class="slider-item slider-item__mrkitty">
+                    <img src="../img/mrkitty/3.png" alt="">
+                </div>
+                <div class="slider-item slider-item__mrkitty">
+                    <img src="../img/mrkitty/4.png" alt="">
+                </div>
+                <div class="slider-item slider-item__mrkitty">
+                    <img src="../img/mrkitty/5.png" alt="">
+                </div>
+                <div class="slider-item slider-item__mrkitty">
+                    <img src="../img/mrkitty/6.png" alt="">
+                </div>
+                <div class="slider-item slider-item__mrkitty">
+                    <img src="../img/mrkitty/7.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="palewaves">
+    <div class="genres">
+        <nav class="card main-nav">
+            <ul>
+                <li>indie pop</li>
+                <li>indie rock</li>
+                <li>synth-pop</li>
+                <li>pop-punk</li>
+                <li>alternative rock</li>
+                <li>dream pop</li>
+            </ul>
+        </nav>
+        <aside class="card side"><a href="https://palewaves.co.uk/">palewaves.co.uk</a></aside>
+    </div>
+    <div class="main-content">
+        <article class="card content">
+            <h1>who are they</h1>
+            <p>
+                Pale Waves are an English rock band from Manchester, formed in 2014. It was founded originally as Creek
+                when lead singer and guitarist Heather Baron-Gracie met drummer Ciara Doran while attending university
+                in Manchester. The other members are guitarist Hugo Silvani and bassist Charlie Wood, completing the
+                lineup. Pale Waves's early work is often described as 80s-inspired indie rock or synth-pop; their
+                second and third albums, however, owe more to the pop-punk genre.
+
+                After signing a record deal with Dirty Hit in 2017, Pale Waves released their debut single, "There's a
+                Honey", followed by "Television Romance". In 2018, the band were ranked fifth in the BBC Sound of 2018
+                poll and won the NME Under the Radar Award at the NME Awards. Pale Waves' debut EP, All the Things I
+                Never Said, was released in February 2018, followed by their debut studio album, My Mind Makes Noises,
+                on 14 September 2018. The band's second album, Who Am I?, was released on 12 February 2021, and peaked
+                at number three on the UK Albums Chart; the record also hit number one on the UK Independent Albums
+                Chart. The band's third album, Unwanted, was released on 12 August 2022.
+            </p>
+        </article>
+        <div class="slider-container" id="slider-container__palewaves">
+            <h1>albums</h1>
+            <div class="arrow-left" id="arrow-left__palewaves">
+                <div class="arrow-bg">
+                    <div class="arrow"></div>
+                </div>
+            </div>
+            <div class="arrow-right" id="arrow-right__palewaves">
+                <div class="arrow-bg">
+                    <div class="arrow"></div>
+                </div>
+            </div>
+            <!-- .slider-track - лента с фотографиями -->
+            <div class="slider-track" id="slider-track__palewaves">
+                <div class="slider-item slider-item__palewaves">
+                    <img src="../img/palewaves/1.png" alt="">
+                </div>
+                <div class="slider-item slider-item__palewaves">
+                    <img src="../img/palewaves/2.png" alt="">
+                </div>
+                <div class="slider-item slider-item__palewaves">
+                    <img src="../img/palewaves/3.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <footer class="main-footer">
+        <h3 class="links">© simp4queermusic</h3>
+        <div class="socials buttons">
+            <button class="btn tg"><img src="../socials/tg.png" alt="telegram"
+                                        style="vertical-align: middle">
+                <div class="container">
+                    <div class="holder tg1"></div>
+                </div>
+            </button>
+            <button class="btn yt"><img src="../socials/yt.png" alt="youtube"
+                                        style="vertical-align: middle">
+                <div class="container">
+                    <div class="holder yt1"></div>
+                </div>
+            </button>
+            <button class="btn twi"><img src="../socials/twi.png" alt="twitter"
+                                         style="vertical-align: middle">
+                <div class="container">
+                    <div class="holder twi1"></div>
+                </div>
+            </button>
+            <button class="btn sp"><img src="../socials/sp.png" alt="spotify"
+                                        style="vertical-align: middle">
+                <div class="container">
+                    <div class="holder sp1"></div>
+                </div>
+            </button>
+            <button class="btn inst"><img src="../socials/inst.png" alt="instagram"
+                                          style="vertical-align: middle">
+                <div class="container">
+                    <div class="holder inst1"></div>
+                </div>
+            </button>
+        </div>
+        <a href="contact_form.html"><h3 class="contacts">contact me</h3></a>
+        <a href="support.html"><h3 class="artists">support me</h3></a>
+    </footer>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="../scripts/artists.js"></script>
 
 </body>
 </html>
