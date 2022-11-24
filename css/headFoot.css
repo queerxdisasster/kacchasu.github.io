@@ -16,6 +16,11 @@ body {
 .gap {
     height: 85px;
 }
+@media (max-width: 768px) {
+    .gap {
+        height: 70px;
+    }
+}
 .container {
     position: relative;
     display: flex;
@@ -56,6 +61,7 @@ body {
     display: inline-block;
     padding: 8px 20px;
     margin: 15px;
+    letter-spacing: 3px;
     background: rgba(255, 255, 255, 0.58);
     color: #000;
     border-radius: 20px;
@@ -283,8 +289,9 @@ footer {
     z-index: 100;
     align-items: center;
     padding: 20px;
-    bottom: -20px;
+    bottom: -10px;
     margin-bottom: 3%;
+    letter-spacing: 2px;
     box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
     border-radius: 15px;
     background: rgba(255, 255, 255, 0.1);
@@ -382,6 +389,8 @@ footer h3:hover {
 .links {
     grid-area: links;
     cursor: default;
+    text-align: center;
+    font-size: 0.7rem;
 }
 .artists {
     grid-area: artists;

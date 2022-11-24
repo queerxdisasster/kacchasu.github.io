@@ -49,6 +49,7 @@ body::after {
 .gallery {
     grid-area: gallery;
     box-sizing: border-box;
+    margin-top: 10px;
     padding: 5px;
     display: grid;
     grid-template-columns: repeat(9, 1fr);

@@ -63,6 +63,7 @@ body::after {
 }
 .container .card .content h3 {
     font-size: 3em;
+    line-height: 1.2em;
     cursor: default;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
     color: #fff;
@@ -188,9 +189,13 @@ input[type=checkbox] {
         font-size: 0.65em;
     }
     .container .card .content p {
-        font-size: 0.5em;
+        font-size: 0.7em;
         color: #fff;
         font-weight: 300;
+    }
+    .container .card .content .details {
+        margin: 10px;
+        padding: 15px 25px;
     }
 }
 
