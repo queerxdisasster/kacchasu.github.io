@@ -44,8 +44,8 @@ body::after {
 .container {
     position: relative;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    place-content: center;
+    place-items: center;
     flex-wrap: wrap;
     z-index: 1;
 }
@@ -184,12 +184,11 @@ body::after {
 input {
     outline: none;
     padding: 1em;
-    margin: 0.5em;
+    margin: 0.5em 1em;
     border: none;
     border-radius: 20px;
     background: none;
     backdrop-filter: opacity(1);
-
     color: white;
     transition: .4s;
 }
@@ -304,5 +303,8 @@ input[type=submit]:hover {
         font-size: 1em;
         color: #fff;
         font-weight: 300;
+    }
+    input {
+        max-width: 70%;
     }
 }
