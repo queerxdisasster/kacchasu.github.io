@@ -55,7 +55,10 @@ nav > ul > li {
     padding: 0 20px;
     cursor: default;
 }
-
+aside > a {
+    text-align: center;
+    vertical-align: center;
+}
 .main-content {
     display: flex;
     flex-wrap: wrap;
