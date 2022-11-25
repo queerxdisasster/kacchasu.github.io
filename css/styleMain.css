@@ -133,7 +133,8 @@ h1 {
 .main-nav > ul{
     display: flex;
     flex-wrap: wrap;
-    place-content: space-between;
+    place-content: center;
+    place-items: center;
 }
 aside {
     display: flex;
