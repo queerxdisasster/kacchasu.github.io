@@ -83,7 +83,7 @@ function changeMainContent() {
                     mrkitty.style.display = 'none';
                     slider('__yungblud');
                     var top = document.getElementById('gallery').clientHeight;
-                    $('body,html').animate({scrollTop: top}, 300);
+                    window.scrollTo({top: top, behavior: 'smooth'});
                     break;
                 case 'palewavesRadio':
                     yungblud.style.display = 'none';
@@ -95,7 +95,7 @@ function changeMainContent() {
                     mrkitty.style.display = 'none';
                     slider('__palewaves');
                     var top = document.getElementById('gallery').clientHeight;
-                    $('body,html').animate({scrollTop: top}, 300);
+                    window.scrollTo({top: top, behavior: 'smooth'});
                     break;
                 case 'conanRadio':
                     yungblud.style.display = 'none';
@@ -107,7 +107,7 @@ function changeMainContent() {
                     mrkitty.style.display = 'none';
                     slider("__conan");
                     var top = document.getElementById('gallery').clientHeight;
-                    $('body,html').animate({scrollTop: top}, 300);
+                    window.scrollTo({top: top, behavior: 'smooth'});
                     break;
                 case 'girlinredRadio':
                     yungblud.style.display = 'none';
@@ -119,7 +119,7 @@ function changeMainContent() {
                     mrkitty.style.display = 'none';
                     slider("__girlinred");
                     var top = document.getElementById('gallery').clientHeight;
-                    $('body,html').animate({scrollTop: top}, 300);
+                    window.scrollTo({top: top, behavior: 'smooth'});
                     break;
                 case 'placeboRadio':
                     yungblud.style.display = 'none';
@@ -131,7 +131,7 @@ function changeMainContent() {
                     mrkitty.style.display = 'none';
                     slider("__placebo");
                     var top = document.getElementById('gallery').clientHeight;
-                    $('body,html').animate({scrollTop: top}, 300);
+                    window.scrollTo({top: top, behavior: 'smooth'});
                     break;
                 case 'samsmithRadio':
                     yungblud.style.display = 'none';
@@ -143,7 +143,7 @@ function changeMainContent() {
                     mrkitty.style.display = 'none';
                     slider("__samsmith");
                     var top = document.getElementById('gallery').clientHeight;
-                    $('body,html').animate({scrollTop: top}, 300);
+                    window.scrollTo({top: top, behavior: 'smooth'});
                     break;
                 case 'mrkittyRadio':
                     yungblud.style.display = 'none';
@@ -155,7 +155,7 @@ function changeMainContent() {
                     mrkitty.style.display = 'block';
                     slider("__mrkitty");
                     var top = document.getElementById('gallery').clientHeight;
-                    $('body,html').animate({scrollTop: top}, 300);
+                    window.scrollTo({top: top, behavior: 'smooth'});
                     break;
             }
         }
